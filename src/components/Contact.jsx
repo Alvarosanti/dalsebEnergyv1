@@ -63,10 +63,13 @@ const Contact = () => {
     emailjs
       .send(
         // import.meta.env.VITE_SERVICE_ID,
-        process.env.VITE_VERCEL_SERVICE_ID,
+        {
+          __APP_ENV__: process.env.VITE_VERCEL_SERVICE_ID,
+          __APP_ENV__: process.env.VITE_VERCEL_TEMPLATE_ID,
+          __APP_ENV__: process.env.VITE_VERCEL_PUBLIC_KEY
+        },
 
         // import.meta.env.VITE_TEMPLATE_ID,
-        process.env.VITE_VERCEL_TEMPLATE_ID,
         {
           from_name: form.name,
           to_name: "DALSEB ENERGY",
@@ -75,7 +78,6 @@ const Contact = () => {
           message: form.message,
         },
         // import.meta.env.VITE_PUBLIC_KEY
-        process.env.VITE_VERCEL_PUBLIC_KEY
       )
       .then(
         () => {
