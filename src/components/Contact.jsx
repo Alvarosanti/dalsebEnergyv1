@@ -64,6 +64,7 @@ const Contact = () => {
       .send(
         // import.meta.env.VITE_SERVICE_ID,
         process.env.REACT_APP_SERVICE_ID,
+        console.log('serviceId',REACT_APP_SERVICE_ID),
 
         // import.meta.env.VITE_TEMPLATE_ID,
         process.env.REACT_APP_TEMPLATE_ID,
