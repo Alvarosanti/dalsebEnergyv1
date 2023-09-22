@@ -63,10 +63,10 @@ const Contact = () => {
     emailjs
       .send(
         // import.meta.env.VITE_SERVICE_ID,
-        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.serviceid,
 
         // import.meta.env.VITE_TEMPLATE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        process.env.templateid,
         {
           from_name: form.name,
           to_name: "DALSEB ENERGY",
@@ -75,7 +75,7 @@ const Contact = () => {
           message: form.message,
         },
         // import.meta.env.VITE_PUBLIC_KEY
-        process.env.NEXT_PUBLIC_PUBLIC_KEY
+        process.env.publickey
       )
       .then(
         () => {
