@@ -63,7 +63,7 @@ const Contact = () => {
     emailjs
       .send(
         // import.meta.env.VITE_SERVICE_ID,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY,
+        process.env.NEXT_PUBLIC_SERVICE_ID,
 
         // import.meta.env.VITE_TEMPLATE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
@@ -75,7 +75,7 @@ const Contact = () => {
           message: form.message,
         },
         // import.meta.env.VITE_PUBLIC_KEY
-        process.env.NEXT_PUBLIC__PUBLIC_KEY
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         () => {
